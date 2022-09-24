@@ -79,6 +79,7 @@
 "menu.contextual.share_generic" = "Convite";
 
 "menu.system.quit.title" = "Sair %@";
+"menu.system.quit.messages.confirm" = "A VPN, se ativa, ainda vai ser executada em segundo plano. Quer sair?";
 
 /* MARK: TunnelKit */
 

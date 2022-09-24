@@ -79,6 +79,7 @@
 "menu.contextual.share_generic" = "Invita";
 
 "menu.system.quit.title" = "Esci da %@";
+"menu.system.quit.messages.confirm" = "La VPN, se abilitata, continuerà ad essere attiva in background. Vuoi comunque uscire?";
 
 /* MARK: TunnelKit */
 

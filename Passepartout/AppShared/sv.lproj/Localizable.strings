@@ -79,6 +79,7 @@
 "menu.contextual.share_generic" = "Bjud in";
 
 "menu.system.quit.title" = "Lämna %@";
+"menu.system.quit.messages.confirm" = "Om ett VPN är aktiverat kommer detta fortfarande att köra i bakgrunden. Vill du lämna?";
 
 /* MARK: TunnelKit */
 

@@ -79,6 +79,7 @@
 "menu.contextual.share_generic" = "Einladen";
 
 "menu.system.quit.title" = "%@ beenden";
+"menu.system.quit.messages.confirm" = "Wenn das VPN aktiviert wurde, läuft es weiter im Hintergrund. Möchtest du beenden?";
 
 /* MARK: TunnelKit */
 

@@ -79,6 +79,7 @@
 "menu.contextual.share_generic" = "Uitnodigen";
 
 "menu.system.quit.title" = "%@ afsluiten";
+"menu.system.quit.messages.confirm" = "De VPN zal, indien geactiveerd, op de achtergrond blijven draaien. Wilt u sluiten?";
 
 /* MARK: TunnelKit */
 

@@ -79,6 +79,7 @@
 "menu.contextual.share_generic" = "邀请";
 
 "menu.system.quit.title" = "退出%@";
+"menu.system.quit.messages.confirm" = "VPN（如果启用）仍将在后台运行。您要退出吗？";
 
 /* MARK: TunnelKit */
 

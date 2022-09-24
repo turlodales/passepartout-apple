@@ -79,6 +79,7 @@
 "menu.contextual.share_generic" = "Zaproś";
 
 "menu.system.quit.title" = "Zakończ %@";
+"menu.system.quit.messages.confirm" = "Jeśli  sieć VPN, jest włączona, będzie nadal działać w tle. Chcesz zakończyć?";
 
 /* MARK: TunnelKit */
 

@@ -79,6 +79,7 @@
 "menu.contextual.share_generic" = "Πρόσκληση";
 
 "menu.system.quit.title" = "Διακοπή %@";
+"menu.system.quit.messages.confirm" = "Το VPN, αν είναι ενεργοποιημένο, θα εξακολουθεί να εκτελείται στο παρασκήνιο. Θέλετε να το διακόψετε?";
 
 /* MARK: TunnelKit */
 

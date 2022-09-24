@@ -79,6 +79,7 @@
 "menu.contextual.share_generic" = "Пригласить";
 
 "menu.system.quit.title" = "Выйти из %@";
+"menu.system.quit.messages.confirm" = "Если включить VPN, он всё равно будет работать в фоновом режиме. Вы точно хотите выйти?";
 
 /* MARK: TunnelKit */
 
