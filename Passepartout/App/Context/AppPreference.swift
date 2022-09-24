@@ -28,6 +28,8 @@ import PassepartoutLibrary
 
 enum AppPreference: String, KeyStoreDomainLocation {
     case launchesOnLogin
+    
+    case confirmsQuit
 
     case isShowingFavorites
 

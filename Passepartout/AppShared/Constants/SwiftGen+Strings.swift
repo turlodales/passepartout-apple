@@ -401,6 +401,14 @@ internal enum L10n {
     }
   }
   internal enum Global {
+    internal enum Alerts {
+      internal enum Buttons {
+        /// Don't ask again
+        internal static let never = L10n.tr("Localizable", "global.alerts.buttons.never", fallback: "Don't ask again")
+        /// Remind me later
+        internal static let remind = L10n.tr("Localizable", "global.alerts.buttons.remind", fallback: "Remind me later")
+      }
+    }
     internal enum Errors {
       /// Missing account
       internal static let missingAccount = L10n.tr("Localizable", "global.errors.missing_account", fallback: "Missing account")
@@ -555,6 +563,10 @@ internal enum L10n {
         internal static func title(_ p1: Any) -> String {
           return L10n.tr("Localizable", "menu.system.quit.title", String(describing: p1), fallback: "Quit %@")
         }
+        internal enum Messages {
+          /// The VPN, if enabled, will still run in the background. Do you want to quit?
+          internal static let confirm = L10n.tr("Localizable", "menu.system.quit.messages.confirm", fallback: "The VPN, if enabled, will still run in the background. Do you want to quit?")
+        }
       }
     }
   }
@@ -640,10 +652,6 @@ internal enum L10n {
         /// It's also a great way to show you care about this project.
         internal static let message = L10n.tr("Localizable", "organizer.alerts.reddit.message", fallback: "Did you know that Passepartout has a subreddit? Subscribe for updates or to discuss issues, features, new platforms or whatever you like.\n\nIt's also a great way to show you care about this project.")
         internal enum Buttons {
-          /// Don't ask again
-          internal static let never = L10n.tr("Localizable", "organizer.alerts.reddit.buttons.never", fallback: "Don't ask again")
-          /// Remind me later
-          internal static let remind = L10n.tr("Localizable", "organizer.alerts.reddit.buttons.remind", fallback: "Remind me later")
           /// Subscribe now!
           internal static let subscribe = L10n.tr("Localizable", "organizer.alerts.reddit.buttons.subscribe", fallback: "Subscribe now!")
         }

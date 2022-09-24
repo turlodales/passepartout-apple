@@ -33,6 +33,8 @@ struct SettingsView: View {
     
     @Environment(\.presentationMode) private var presentationMode
     
+    @AppStorage(AppPreference.confirmsQuit.key) private var confirmsQuit = true
+    
 //    private var isTestBuild: Bool {
 //        Constants.App.isBeta || Constants.InApp.appType == .beta
 //    }
@@ -48,12 +50,21 @@ struct SettingsView: View {
     
     var body: some View {
         List {
+            #if targetEnvironment(macCatalyst)
+            preferencesSection
+            #endif
             aboutSection
             diagnosticsSection
         }.toolbar {
             themeCloseItem(presentationMode: presentationMode)
         }.themeSecondaryView()
         .navigationTitle(L10n.Settings.title)
+    }
+    
+    private var preferencesSection: some View {
+        Section {
+            Toggle(L10n.Preferences.Items.ConfirmQuit.caption, isOn: $confirmsQuit)
+        }
     }
     
     private var aboutSection: some View {

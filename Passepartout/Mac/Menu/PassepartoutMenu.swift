@@ -99,12 +99,61 @@ class PassepartoutMenu {
 //                NSApp.orderFrontStandardAboutPanel(nil)
 //                NSApp.activate(ignoringOtherApps: true)
 //            },
-            TextItem(L10n.Menu.System.Quit.title(Constants.Global.appName), key: "q") {
-                NSApp.terminate(nil)
-            }
+            TextItem(quitMessage, key: "q", action: confirmQuit)
         ] as [ItemGroup])
         
         return children
+    }
+}
+
+extension PassepartoutMenu {
+
+    // XXX: hardcoded to AppPreference.confirmsQuit.key to avoid dependency
+    private static let confirmsQuitKey = "Passepartout.App.confirmsQuit"
+    
+    private var confirmsQuit: Bool {
+        get {
+            UserDefaults.standard.bool(forKey: Self.confirmsQuitKey)
+        }
+        set {
+            UserDefaults.standard.set(newValue, forKey: Self.confirmsQuitKey)
+        }
+    }
+    
+    private var quitMessage: String {
+        L10n.Menu.System.Quit.title(Constants.Global.appName)
+    }
+
+    private func confirmQuit() {
+        guard confirmsQuit else {
+            doQuit()
+            return
+        }
+        
+        let alert = NSAlert()
+        alert.alertStyle = .warning
+        alert.messageText = quitMessage
+        alert.informativeText = L10n.Menu.System.Quit.Messages.confirm
+
+        alert.addButton(withTitle: L10n.Global.Strings.ok)
+        alert.addButton(withTitle: L10n.Global.Strings.cancel)
+        alert.addButton(withTitle: L10n.Global.Alerts.Buttons.never)
+
+        switch alert.runModal() {
+        case .alertSecondButtonReturn:
+            break
+
+        case .alertThirdButtonReturn:
+            confirmsQuit = false
+            doQuit()
+
+        default:
+            doQuit()
+        }
+    }
+    
+    private func doQuit() {
+        NSApp.terminate(nil)
     }
 }
 
